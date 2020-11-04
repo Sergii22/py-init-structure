@@ -15,5 +15,3 @@ class TestProjectFiles(Enum):
     BASE_TEST = "base_test.py"
     TOOLS_FOLDER = "tools"
     UTILS_FOLDER = "utils"
-
-

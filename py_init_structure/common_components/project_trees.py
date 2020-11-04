@@ -61,4 +61,3 @@ c = ProjectTree(a)
 d = ProjectTree(b)
 c.create_project_tree(a.tree, a.root_dir_name)
 d.create_project_tree(b.tree, b.root_dir_name)
-

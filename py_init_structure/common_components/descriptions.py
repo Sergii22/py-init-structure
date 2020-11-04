@@ -16,10 +16,10 @@ class Descriptions(Enum):
     """
 
     BASE_POPUP_EXAMPLE = """# Store here common locators and methods for popups of target APP to build Page Object
-# structure. 
+# structure.
 # From this class, all other popups classes will be inherited. NOTE: in example below imports
-# are ignored for simplicity 
- 
+# are ignored for simplicity
+
 # class BasePopup:
 #  POPUP_MODAL = (By.CSS_SELECTOR, "some.css.locator")
 
@@ -27,13 +27,13 @@ class Descriptions(Enum):
 #      self.driver = driver
 
 #  def is_popup_displayed(self):
-#     pass 
+#     pass
             """
 
     BASE_PAGE_EXAMPLE = """# Store here common locators and methods for pages of target APP to build
-# Page Object structure. 
+# Page Object structure.
 # From this class, all other page classes will be inherited. NOTE: in example below imports
-# are ignored for simplicity 
+# are ignored for simplicity
 
 # class BasePage:
 #   MENU_LIST = (By.CSS_SELECTOR, "some.css.locator.on.page")
@@ -45,14 +45,14 @@ class Descriptions(Enum):
 #      pass
     """
 
-    BASE_TEST = """# Create here base class for tests, from which every test will be inherited. 
+    BASE_TEST = """# Create here base class for tests, from which every test will be inherited.
 # Example:
 # @pytest.mark.usefixtures('preconditions', 'postconditions', 'report_generation')
 # class BaseTest:
 #       pass
     """
 
-    TOOLS_DESCRIPTION = """# Put here any scripts, emulators, stubs other useful staff, that required 
+    TOOLS_DESCRIPTION = """# Put here any scripts, emulators, stubs other useful staff, that required
 # for test environment or test
 # execution, but not directly related to target app
 """
@@ -60,12 +60,12 @@ class Descriptions(Enum):
     BASE_SERVICE_DESCRIPTION = """# Create here base class for the application API. Store payloads, routes and methods
 #             Example of base service class:
 #             class BaseService:
-# 
+#
 #             def __init__(self):
 #                self.route = ""
 #                self.uri = ""
-#                self.header = "" 
-# 
+#                self.header = ""
+#
 #             def post(self, payload: dict, headers, *routes):
 #                pass
     """
@@ -82,23 +82,23 @@ class Descriptions(Enum):
 # Plugins are generally files defined in your project or other modules which might be needed in your tests.
     """
 
-    PYTEST_INI_FILE = """ # This file is for basic test configuration. 
+    PYTEST_INI_FILE = """ # This file is for basic test configuration.
 # Refer to https://docs.pytest.org/en/2.7.3/customize.html
     """
 
     DOCKER_FILE = """ # In case if the test project is supposed to be executed on other machines or via CI tools,
-# (Jenkins for example), it would be handy to put code into a docker container. Dockerfile is required for image 
+# (Jenkins for example), it would be handy to put code into a docker container. Dockerfile is required for image
 # creation. Refer to docker documentation https://docs.docker.com/engine/reference/builder/
     """
 
-    DOCKER_COMPOSE_FILE = """ # In case if more than one container is creating for the test project, compose could be 
+    DOCKER_COMPOSE_FILE = """ # In case if more than one container is creating for the test project, compose could be
 # used. Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a YAML
-# file to configure your application’s services. Then, with a single command, you create and start all the services 
+# file to configure your application’s services. Then, with a single command, you create and start all the services
 # from your configuration. To learn more about all the features of Compose, see the list of features.
 # Refer to https://docs.docker.com/compose/
     """
 
-    JENKINSFILE = """ # In case if project us supposed to be executed on CI (Jenkins), Jenkins Pipeline is handy to 
+    JENKINSFILE = """ # In case if project us supposed to be executed on CI (Jenkins), Jenkins Pipeline is handy to
 # create and support jobs "as code". Purpose of Jenkinsfile - store Jenkins Pipeline script. Get more from the Jenkins
 # documentation -  https://www.jenkins.io/doc/book/pipeline/getting-started/
     """
