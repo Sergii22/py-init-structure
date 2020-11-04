@@ -1,7 +1,7 @@
 from enum import Enum
 
 
-class UITestsFolders(Enum):
+class TestProjectFiles(Enum):
     CONFIGS_DIR = "configs"
     CONFIG_FILE = "config.py"
     PAGE_OBJECT_DIR = "page_object"

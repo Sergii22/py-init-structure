@@ -1,7 +1,10 @@
 from enum import Enum
 
 
-class BaseFileDir(Enum):
+class BasePythonFileDir(Enum):
     INIT = "__init__.py"
     README = "README.md"
     REQUIREMENTS_FILE = "requirements.txt"
+    DOCKER_FILE = "Dockerfile"
+    DOCKER_COMPOSE_FILE = "docker-compose.yml"
+    JENKINSFILE = "Jenkinsfile"
