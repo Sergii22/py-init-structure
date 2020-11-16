@@ -5,3 +5,4 @@ Available options for now:
 - `pytest-tests-project` -  creates folders for common test project with pytest, adds common files with package descriptions
 
 ### How to use
+Start with `init_structure` command and follow interactive instruction to setup project file structure

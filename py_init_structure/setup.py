@@ -15,6 +15,6 @@ setup(
     install_requires=requirements,
     entry_points='''
             [console_scripts]
-            myhello=controller:create_structure
+            init_structure=controller:create_structure
         '''
 )
