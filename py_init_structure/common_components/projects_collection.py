@@ -1,12 +1,10 @@
-from py_init_structure.common_components.trees.test_project_sample import\
-    TestProjectSampleTree
-from py_init_structure.common_components.trees.test_project_tree import\
-    TestProjectTree
-from py_init_structure.common_components.project_trees import\
-    ProjectTree
-
-from py_init_structure.common_components.trees.env_and_deploy_files import \
+from common_components.project_trees import ProjectTree
+from common_components.trees.env_and_deploy_files import\
     EnvDeployCIFiles
+from common_components.trees.test_project_sample import\
+    TestProjectSampleTree
+from common_components.trees.test_project_tree import \
+    TestProjectTree
 
 
 class ProjectCollection:

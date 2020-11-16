@@ -2,7 +2,7 @@ import click
 
 import questionary
 
-from py_init_structure.projects_collection import ProjectCollection
+from common_components.projects_collection import ProjectCollection
 
 
 class QuestionaryOption(click.Option):

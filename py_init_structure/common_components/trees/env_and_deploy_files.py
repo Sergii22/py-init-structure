@@ -1,7 +1,8 @@
-from py_init_structure.common_components.base_files_dir import\
+from common_components.base_files_dir import \
     BasePythonFileDir as Base
-from py_init_structure.common_components.descriptions import Descriptions\
-    as DC
+
+from common_components.descriptions import \
+    Descriptions as DC
 
 
 class EnvDeployCIFiles:
@@ -23,7 +24,7 @@ class EnvDeployCIFiles:
             "type": "directory",
             "children": [
                 {
-                    "name":  Base.DOCKER_COMPOSE_FILE.value,
+                    "name": Base.DOCKER_COMPOSE_FILE.value,
                     "type": "file",
                     "content": DC.DOCKER_COMPOSE_FILE.value
                 },

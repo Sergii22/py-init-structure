@@ -13,4 +13,8 @@ setup(
     author="Sergii Golovach",
     license="MIT",
     install_requires=requirements,
+    entry_points='''
+            [console_scripts]
+            myhello=controller:create_structure
+        '''
 )

@@ -1,8 +1,8 @@
-from py_init_structure.common_components.test_project_files import \
+from common_components.test_project_files import \
     TestProjectFiles as TP
-from py_init_structure.common_components.base_files_dir import\
+from common_components.base_files_dir import\
     BasePythonFileDir as BF
-from py_init_structure.common_components.descriptions import\
+from common_components.descriptions import\
     Descriptions
 
 
