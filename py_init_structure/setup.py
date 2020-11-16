@@ -16,5 +16,7 @@ setup(
     entry_points='''
             [console_scripts]
             init_structure=controller:create_structure
-        '''
+            dir_tree_to_json=controller:print_current_dir_tree
+        ''',
+    python_requires='>=3.6',
 )

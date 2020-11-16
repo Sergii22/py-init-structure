@@ -1,8 +1,10 @@
 import click
-
+import os
+import json
 import questionary
 
-from common_components.projects_collection import ProjectCollection
+from common_components.src.projects_collection import ProjectCollection
+from common_components.trees.project_trees import print_dir_tree
 
 
 class QuestionaryOption(click.Option):
@@ -26,7 +28,7 @@ class QuestionaryOption(click.Option):
               default="",
               help="Name of directory where project will be created")
 @click.option("--project-type", prompt="Select type of project",
-              type=click.Choice(["general-purpose-tests-project",
+              type=click.Choice(["general-tests-project",
                                  "pytest-tests-project"]),
               cls=QuestionaryOption)
 @click.option('--ci-config', prompt="Will you use docker and Jenkins?",
@@ -47,5 +49,7 @@ def create_structure(directory, project_type, ci_config):
                           project_type="env_and_deploy_files").build_project()
 
 
-if __name__ == '__main__':
-    create_structure()
+@click.command()
+def print_current_dir_tree():
+    print("Print structure")
+    print(json.dumps(print_dir_tree(os.path.curdir), indent=4))

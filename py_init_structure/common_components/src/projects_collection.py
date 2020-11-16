@@ -1,4 +1,4 @@
-from common_components.project_trees import ProjectTree
+from common_components.trees.project_trees import ProjectTree
 from common_components.trees.env_and_deploy_files import\
     EnvDeployCIFiles
 from common_components.trees.test_project_sample import\
@@ -18,7 +18,7 @@ class ProjectCollection:
         This method to store objects of projects trees
         :return: object of tree for particular project
         """
-        projects = {"general-purpose-tests-project":
+        projects = {"general-tests-project":
                     TestProjectSampleTree(self.directory),
                     "pytest-tests-project":
                         TestProjectTree(self.directory),

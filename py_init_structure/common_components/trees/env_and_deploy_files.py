@@ -1,7 +1,7 @@
-from common_components.base_files_dir import \
+from common_components.src.base_files_dir import \
     BasePythonFileDir as Base
 
-from common_components.descriptions import \
+from common_components.src.descriptions import \
     Descriptions as DC
 
 

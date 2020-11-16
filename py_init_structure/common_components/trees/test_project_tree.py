@@ -1,10 +1,10 @@
-from common_components.test_project_files import \
+from common_components.src.test_project_files import \
     TestProjectFiles as TP
-from common_components.base_files_dir import \
+from common_components.src.base_files_dir import \
     BasePythonFileDir as Base
-from common_components.descriptions import \
+from common_components.src.descriptions import \
     Descriptions as DC
-from common_components.pytest import \
+from common_components.src.pytest import \
     PytestFiles
 
 
