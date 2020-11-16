@@ -2,9 +2,6 @@ from pathlib import Path
 
 import os
 
-from py_init_structure.common_components.trees.env_and_deploy_files import EnvDeployCIFiles
-from py_init_structure.common_components.trees.test_project_tree import TesProjectTree
-
 
 class ProjectTree:
     def __init__(self, project_tree, root_dir=None):
@@ -28,7 +25,9 @@ class ProjectTree:
             yield prefix + pointer + path.name
             if path.is_dir():
                 extension = branch if pointer == tee else space
-                yield from self.get_tree_representation(path, prefix=prefix + extension)
+                yield from \
+                    self.get_tree_representation(path,
+                                                 prefix=prefix + extension)
 
     def print_tree(self):
         """
@@ -46,18 +45,12 @@ class ProjectTree:
         if tree.get("children"):
             for i in tree.get("children"):
                 if i.get("type") == "directory":
-                    self.create_project_tree(i, root_name + "/" + i.get("name"))
+                    self.create_project_tree(i, root_name + "/" +
+                                             i.get("name"))
                 else:
-                    with open(os.path.join(root_name, i.get("name")), 'a') as temp_file:
+                    with open(os.path.join(root_name,
+                                           i.get("name")), 'a') as temp_file:
                         if i.get("content"):
                             temp_file.write(i.get("content"))
                         else:
                             temp_file.write("")
-
-
-a = TesProjectTree("hh")
-b = EnvDeployCIFiles("hh")
-c = ProjectTree(a)
-d = ProjectTree(b)
-c.create_project_tree(a.tree, a.root_dir_name)
-d.create_project_tree(b.tree, b.root_dir_name)

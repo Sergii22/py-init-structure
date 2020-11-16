@@ -1,9 +1,14 @@
-from py_init_structure.common_components.test_project_files import TestProjectFiles as TP
-from py_init_structure.common_components.base_files_dir import BasePythonFileDir as Base
-from py_init_structure.common_components.descriptions import Descriptions as DC
+from py_init_structure.common_components.test_project_files import \
+    TestProjectFiles as TP
+from py_init_structure.common_components.base_files_dir import \
+    BasePythonFileDir as Base
+from py_init_structure.common_components.descriptions import \
+    Descriptions as DC
+from py_init_structure.common_components.pytest import \
+    PytestFiles
 
 
-class TesProjectTree:
+class TestProjectTree:
 
     @property
     def dir_name(self):
@@ -112,6 +117,26 @@ class TesProjectTree:
                             "content": DC.BASE_SERVICE_DESCRIPTION.value
                         }
                     ]
+                },
+                {
+                    "name": Base.REQUIREMENTS_FILE.value,
+                    "type": "file",
+                    "content": DC.REQUIREMENTS_FILE.value
+                },
+                {
+                    "name": PytestFiles.PYTEST_INI_FILE.value,
+                    "type": "file",
+                    "content": DC.PYTEST_INI_FILE.value
+                },
+                {
+                    "name": PytestFiles.CONFTEST.value,
+                    "type": "file",
+                    "content": DC.CONFTEST_FILE.value
+                },
+                {
+                    "name": Base.README.value,
+                    "type": "file",
+                    "content": DC.README.value
                 }
             ]
         }
