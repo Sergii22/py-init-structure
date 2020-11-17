@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 
 requirements = [
     "click==7.1.2",
-    "questionary==1.8.0",
+    "questionary",
     "prompt-toolkit==3.0.8",
     "wcwidth==0.2.5"
 ]
@@ -10,10 +10,11 @@ requirements = [
 setup(
     name="py-init-structure",
     packages=find_packages(),
-    version="0.1.3",
+    version="0.1.4",
     description="Creates structure of autotest project",
     author="Sergii Golovach",
     license="MIT",
+    classifiers=["Programming Language :: Python :: 3"],
     install_requires=requirements,
     entry_points='''
             [console_scripts]
