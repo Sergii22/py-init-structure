@@ -1,5 +1,8 @@
 from setuptools import find_packages, setup
 
+with open("README.md", "r") as rf:
+    long_description = rf.read()
+
 requirements = [
     "click==7.1.2",
     "questionary==1.8.0",
@@ -11,6 +14,8 @@ setup(
     name="py-init-structure",
     packages=find_packages(),
     version="0.1.0",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
     description="Creates structure of autotest project",
     author="Sergii Golovach",
     license="MIT",
