@@ -4,13 +4,13 @@ requirements = [
     "click==7.1.2",
     "questionary",
     "prompt-toolkit==3.0.8",
-    "wcwidth==0.2.5"
+    "wcwidth"
 ]
 
 setup(
     name="py-init-structure",
     packages=find_packages(),
-    version="0.1.4",
+    version="0.1.5",
     description="Creates structure of autotest project",
     author="Sergii Golovach",
     license="MIT",
