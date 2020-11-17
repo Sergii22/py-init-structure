@@ -2,7 +2,8 @@ from setuptools import find_packages, setup
 
 requirements = [
     "click==7.1.2",
-    "questionary==1.8.0"
+    "questionary==1.8.0",
+    "prompt-toolkit==3.0.8"
 ]
 
 setup(
@@ -15,8 +16,8 @@ setup(
     install_requires=requirements,
     entry_points='''
             [console_scripts]
-            init_structure=controller:create_structure
-            dir_tree_to_json=controller:print_current_dir_tree
+            init_structure=common_components.src.controller:create_structure
+            dir_tree_to_json=common_components.src.controller:print_current_dir_tree
         ''',
     python_requires='>=3.6',
 )
