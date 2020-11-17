@@ -5,15 +5,13 @@ with open("README.md", "r") as rf:
 
 requirements = [
     "click==7.1.2",
-    "questionary==1.8.0",
-    "prompt-toolkit==3.0.8",
-    "wcwidth==0.2.5"
+    "questionary==1.8.0"
 ]
 
 setup(
     name="py-init-structure",
     packages=find_packages(),
-    version="0.1.1",
+    version="0.1.2",
     long_description=long_description,
     long_description_content_type="text/markdown",
     description="Creates structure of autotest project",
