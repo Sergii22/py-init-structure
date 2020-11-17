@@ -5,7 +5,7 @@ from common_components.src.descriptions import \
     Descriptions as DC
 
 
-class EnvDeployCIFiles:
+class DockerTree:
 
     @property
     def dir_name(self):
@@ -40,3 +40,31 @@ class EnvDeployCIFiles:
                 }
             ]
         }
+
+
+class JenkinsTree:
+
+    @property
+    def dir_name(self):
+        return self.root_dir_name
+
+    def __init__(self, root_dir_name=None):
+        self.root_dir_name = root_dir_name
+
+    @property
+    def tree(self):
+        return self.tree_dict()
+
+    def tree_dict(self):
+        return {
+            "name": self.root_dir_name,
+            "type": "directory",
+            "children": [
+                {
+                    "name": Base.JENKINSFILE.value,
+                    "type": "file",
+                    "content": DC.JENKINSFILE.value
+                }
+            ]
+        }
+

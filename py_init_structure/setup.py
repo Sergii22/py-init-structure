@@ -11,7 +11,7 @@ requirements = [
 setup(
     name="py-init-structure",
     packages=find_packages(),
-    version="0.1.2",
+    version="0.1.3",
     long_description=long_description,
     long_description_content_type="text/markdown",
     description="Creates structure of autotest project",

@@ -1,6 +1,6 @@
 from common_components.trees.project_trees import ProjectTree
 from common_components.trees.env_and_deploy_files import\
-    EnvDeployCIFiles
+    DockerTree, JenkinsTree
 from common_components.trees.test_project_sample import\
     TestProjectSampleTree
 from common_components.trees.test_project_tree import \
@@ -22,7 +22,8 @@ class ProjectCollection:
                     TestProjectSampleTree(self.directory),
                     "pytest-tests-project":
                         TestProjectTree(self.directory),
-                    "env_and_deploy_files": EnvDeployCIFiles(self.directory)}
+                    "docker": DockerTree(self.directory),
+                    "jenkins": JenkinsTree(self.directory)}
         return projects.get(self.project_type)
 
     def build_project(self):

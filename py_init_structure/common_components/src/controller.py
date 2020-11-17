@@ -31,22 +31,30 @@ class QuestionaryOption(click.Option):
               type=click.Choice(["general-tests-project",
                                  "pytest-tests-project"]),
               cls=QuestionaryOption)
-@click.option('--ci-config', prompt="Will you use docker and Jenkins?",
+@click.option('--docker', prompt="Will you use Docker in your project?",
               type=click.Choice(["yes",
                                  "no"]),
               cls=QuestionaryOption)
-def create_structure(directory, project_type, ci_config):
+@click.option('--jenkins', prompt="Will you use Jenkins in your project?",
+              type=click.Choice(["yes",
+                                 "no"]),
+              cls=QuestionaryOption)
+def create_structure(directory, project_type, docker, jenkins):
     """
     Method to create structure of test project
-    :param ci_config: to add files for Docker and Jenkins
+    :param jenkins: to add files for Jenkins
+    :param docker: to add files for Docker
     :param directory: directory where folders and files will be added
     :param project_type: specification for the project
     """
     ProjectCollection(directory=directory if directory else None,
                       project_type=project_type).build_project()
-    if ci_config == "yes":
+    if docker == "yes":
         ProjectCollection(directory=directory if directory else None,
-                          project_type="env_and_deploy_files").build_project()
+                          project_type="docker").build_project()
+    if jenkins == "yes":
+        ProjectCollection(directory=directory if directory else None,
+                          project_type="jenkins").build_project()
 
 
 @click.command()
