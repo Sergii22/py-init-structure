@@ -9,7 +9,7 @@ requirements = [
 setup(
     name="py-init-structure",
     packages=find_packages(),
-    version="0.1.1",
+    version="0.1.0",
     description="Creates structure of autotest project",
     author="Sergii Golovach",
     license="MIT",
